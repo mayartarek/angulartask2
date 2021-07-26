@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { ShopRoutingModule } from './shop-routing.module';
 import { ShopComponent } from './shop/shop.component';
+import { NgbModule, NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
+
 
 
 @NgModule({
@@ -11,7 +13,10 @@ import { ShopComponent } from './shop/shop.component';
   ],
   imports: [
     CommonModule,
-    ShopRoutingModule
-  ]
+    ShopRoutingModule,
+    NgbModule
+
+  ],   providers: [NgbActiveModal],
+
 })
 export class ShopModule { }

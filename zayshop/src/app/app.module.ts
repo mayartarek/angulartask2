@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutModule } from './layout/layout.module';
-
+import { FormsModule } from '@angular/forms';
+import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [
@@ -14,9 +15,9 @@ import { LayoutModule } from './layout/layout.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,LayoutModule
+    NgbModule,LayoutModule,FormsModule
   ],
-  providers: [],
+  providers: [NgbActiveModal],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

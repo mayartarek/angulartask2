@@ -1,13 +1,77 @@
-.about{
-    background-color: $GreenColor;
-    .about__details{
-        display: flex;
-        @media screen and (max-width:1024px) {
-            display: block; }
-
-            .about__left{
-                img{width: 50%;}
-            }
-       
+.about {
+  background-color: #59ab6e;
+  padding: 65px;
+  margin-bottom: 100px;
+  .about__details {
+    display: flex;
+    @media screen and (max-width: 1024px) {
+      display: block;
     }
+    .about__right {
+      display: flex;
+
+      flex-direction: column;
+      justify-content: center;
+      color: #fff;
+      h1 {
+        font-weight: 600;
+      }
+    }
+    .about__left {
+      img {
+        width: 400px;
+        @media screen and (max-width: 1024px) {
+          width: 258px;
+        }
+      }
+    }
+  }
+}
+
+.services {
+  text-align: center;
+
+  .services__top {
+    margin-bottom: 62px;
+    h1 {
+      font-size: 41px;
+    }
+  }
+  .services__bottom {
+    margin: 0px 30px 100px 30px;
+    display: grid;
+    grid-gap: 80px;
+    grid-row: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin-top: 20px;
+    .services__item {
+      display: block;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 40px;
+      &:hover {
+        background-color: $GreenColor;
+        transition: 0.4s;
+        svg ,p{
+          color: white;
+        }
+      }
+      p {
+        font-family: 200;
+        font-size: 24px;
+      }
+      svg {
+        color: $GreenColor;
+        width: 85px;
+
+        height: 110px;
+      }
+    }
+  }
+}
+
+
+.brands{
+    text-align: center;
+    background-color: #e9eef5;
+    padding: 40px 30px;
 }

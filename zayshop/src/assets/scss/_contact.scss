@@ -1,0 +1,29 @@
+.contact{
+    background-color: #e9eef5;
+    text-align: center;
+    
+    .contact__top{background-color: #e9eef5;
+    padding: 60px;
+    }
+}
+.form{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    .form__user_data{
+        display: flex;
+        width: 100%;
+       .form-group{
+           width: 50%;
+           margin-right: 10px;
+       }
+    }
+    .auth__button{
+        display: flex;
+        justify-content: flex-end;
+        margin:14px 0px;
+         button{
+            font-size: 25px;
+    }
+    }
+   
+}

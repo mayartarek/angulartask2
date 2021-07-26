@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-shop',
@@ -6,8 +7,21 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class ShopComponent implements OnInit {
+  private isOpen = '';
+  
+  toggled(event: any) {
+    if (event) {
+        console.log('is open');
+        this.isOpen = 'is open'
+    } else {
+      console.log('is closed');
+      this.isOpen = 'is closed'
+    }
+  }
+  constructor(config: NgbDropdownConfig) {
+  
 
-  constructor() { }
+   }
 
   ngOnInit(): void {
   }
