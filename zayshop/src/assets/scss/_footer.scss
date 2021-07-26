@@ -1,0 +1,83 @@
+.footer{
+    padding:30px;
+    background-color:#212934 !important;
+    footer{
+        color: #dcdde1 !important;
+        margin-top: 12px;
+    }
+    h6{
+        
+      border-bottom:1px solid #2d343f ;
+      padding-bottom: 30px;
+      font-weight: 500;
+      font-size: 27px;
+      color: #dcdde1;
+    }
+    span,a,svg {
+
+        font-size: 18px;
+        color: #dcdde1;;
+        font-weight: 300;
+      &:hover{
+          text-decoration: none;
+          color:$GreenColor ;
+      }
+    
+    }
+    .zay_contact{
+        margin: 30px;
+    display: grid;
+    grid-gap: 80px;
+    grid-row: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    border-bottom:1px solid #2d343f ;
+    padding-bottom: 70px;
+
+    h5{
+        color: $GreenColor;
+        border-bottom:1px solid #2d343f ;
+        padding-bottom: 30px;
+        font-weight: 200;
+        font-size: 30px;
+    }
+    ul{list-style: none;
+        padding: 0;
+    
+    li{
+        margin-top: 12px;
+        svg{
+            margin-right: 5px;
+        }
+    }
+}
+.zay_contact__product{
+    ol{padding: 0px;}
+}
+    }
+
+
+   .social-contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom:1px solid #2d343f ;
+    padding-bottom: 29px;
+       .social-contact__right{
+           display: flex;
+           margin-right: auto;
+           width: 30%;
+           
+           svg{
+            width: 32px;
+            height:33px;
+           }
+       }
+       .social-contact__left{
+           width: 40%;
+           flex-direction: row;
+           button{
+            width: 104px;
+           }
+       }
+   }  
+}

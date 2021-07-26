@@ -1,0 +1,13 @@
+.about{
+    background-color: $GreenColor;
+    .about__details{
+        display: flex;
+        @media screen and (max-width:1024px) {
+            display: block; }
+
+            .about__left{
+                img{width: 50%;}
+            }
+       
+    }
+}
