@@ -37,7 +37,7 @@
   display: grid;
   grid-gap: 121px;
   grid-row: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin-top: 150px;
   margin-bottom: 150px;
   .shopping__item {
@@ -70,7 +70,7 @@
     display: grid;
     grid-gap: 80px;
     grid-row: 30px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     .product__down__item {
       .product_item__details {
           padding: 12px;

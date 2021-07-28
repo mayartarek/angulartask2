@@ -100,15 +100,34 @@
       </p>
     </div>
     <div class="brands__bottom">
-      <ngb-carousel *ngIf="images">
+      carousel-config.html
+carousel-config.ts
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper row">
+      
+        <div class="item card col-3 p-md-6" *ngFor="let image of images">
+         <a href="">
+           <img [src]="image.img" class="card-img-top " alt="..." /></a> 
+        
+      </div>
+    </div>
+
+  </ng-template>
+ 
+</ngb-carousel>
+      <!-- <ngb-carousel *ngIf="images">
         <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
           <div class="row">
-            <div class="item card col-md-3" *ngFor="let image of images">
-             <a href=""><img [src]="image.img" class="card-img-top" alt="..." /></a> 
+            <div class="item card col-3 p-md-5" *ngFor="let image of images">
+             <a href="">
+               <img [src]="image.img" class="card-img-top " alt="..." /></a> 
             </div>
           </div>
+          </div>
         </ng-template>
-      </ngb-carousel>
+      </ngb-carousel> -->
     </div>
   </div>
 </section>

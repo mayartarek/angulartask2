@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+  isOpen=false;
+  collapse(){
 
+    return this.isOpen=!this.isOpen;
+ }
   ngOnInit(): void {
   }
 

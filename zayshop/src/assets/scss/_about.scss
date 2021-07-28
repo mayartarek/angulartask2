@@ -74,4 +74,8 @@
     text-align: center;
     background-color: #e9eef5;
     padding: 40px 30px;
+      
+    img{    filter: grayscale(100%);
+      opacity: 0.5;
+    width: 12px;}
 }

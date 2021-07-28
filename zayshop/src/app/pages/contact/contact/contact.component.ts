@@ -7,13 +7,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 })
 export class ContactComponent implements OnInit {
-    
-  
-  contactForm!: FormGroup;
+
+  contactForm: FormGroup;
 
   constructor(private formbuilder: FormBuilder) { }
 
   ngOnInit(): void {
+   this.initForm();
   }
   private initForm(): void {
     const fullName = '';
@@ -30,10 +30,9 @@ export class ContactComponent implements OnInit {
     });
   }
   submit() {
-   console.log(this.contactForm.value);
   }
   onSubmit(f: any) {
-    console.log(f.value);
+
   }
 
 }

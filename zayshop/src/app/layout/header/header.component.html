@@ -102,11 +102,12 @@
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
+        (click)="collapse()"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"  [class.show]="isOpen">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a

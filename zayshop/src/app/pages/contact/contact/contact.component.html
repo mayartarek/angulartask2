@@ -28,11 +28,11 @@
           <div
             class="invalid-feedback"
             *ngIf="
-              contactForm.get('fullName')?.touched &&
-              contactForm.get('fullName')?.invalid
+              contactForm.get('fullName').touched &&
+              contactForm.get('fullName').invalid
             "
           >
-            <p *ngIf="contactForm.get('fullName')?.errors?.required">
+            <p *ngIf="contactForm.get('fullName').errors?.required">
               Fullname is required
             </p>
           </div>
@@ -48,14 +48,14 @@
           />
           <div
             *ngIf="
-              contactForm.get('email')?.touched && contactForm.get('email')?.invalid
+              contactForm.get('email').touched && contactForm.get('email').invalid
             "
             class="invalid-feedback"
           >
-            <p *ngIf="contactForm.get('email')?.errors?.required">
+            <p *ngIf="contactForm.get('email').errors?.required">
               Email is required
             </p>
-            <p *ngIf="contactForm.get('email')?.errors?.pattern">
+            <p *ngIf="contactForm.get('email').errors?.pattern">
               Email must be valid
             </p>
           </div>
@@ -73,11 +73,11 @@
           <div
             class="invalid-feedback"
             *ngIf="
-              contactForm.get('subject')?.touched &&
-              contactForm.get('subject')?.invalid
+              contactForm.get('subject').touched &&
+              contactForm.get('subject').invalid
             "
           >
-            <p *ngIf="contactForm.get('subject')?.errors?.required">
+            <p *ngIf="contactForm.get('subject').errors?.required">
               Subject is required
             </p>
           </div>
@@ -93,7 +93,7 @@
           ></textarea>
         </div>
         <div class="auth__button">
-          <button class="butn " [disabled]="!contactForm.valid">Let's Talk</button>
+          <button class="butn " [disabled]="contactForm.valid">Let's Talk</button>
         </div>
       </form></div>
   

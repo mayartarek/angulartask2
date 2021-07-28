@@ -1,23 +1,51 @@
 <section class="market">
-    <div class="container">  <div class="category col-lg-3">
-    <h1>Categories
-    </h1>
-    <ol>
-        <li>
-            
-            <span>
+  <div class="container">
+    <div class="category col-lg-3">
+      <h1>Categories</h1>
+      <ngb-accordion [closeOthers]="true">
+        <ngb-panel
+          *ngFor="let acc of accordion"
+          id="acc-{{ acc.id }}"
+          title="{{ acc.title }}"
+        >
+          <ng-template ngbPanelContent>
+            <ul>
+              <li *ngFor="let category of acc.cat">
+                <a> {{ category }}</a>
+              </li>
+            </ul>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>
+    <div class="col-lg-9">
+      <div class="products">
+        <div class="products__header">
+          <button *ngFor="let filter of filters">
+            {{ filter }}
+          </button>
+          <select class="form-control">
+            <option>Featured</option>
+            <option>A to Z</option>
+            <option>Item</option>
+          </select>
+        </div>
+        <div class="products__items">
+             <div class="products__item" *ngFor="let product of products">
+          <img   [src]="product" />
+          <p>Oupidatat non</p>
+          <p>M/L/X/XL</p>
 
-            </span>
-            <ol>
-                <li></li>
-                <li></li>
-            </ol>
-        </li>
-    </ol>
+          <ngb-rating class="ng_rating" [max]="5"> </ngb-rating>
+          <p>$250.00</p>
+        </div>
+        </div>
+        <ngb-pagination [collectionSize]="30"  aria-label="Default pagination"></ngb-pagination>
 
-   </div>
-   <div class=" col-lg-9">
+      </div>
 
-   </div></div>
- 
+       
+      </div>
+    </div>
+  
 </section>
