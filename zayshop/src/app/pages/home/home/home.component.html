@@ -51,25 +51,26 @@
   </ngb-carousel>
 </section>
 
-<section class="category">
+<section class="section category">
   <div class="container">
-    <h2>Categories of The Month</h2>
-    <p>
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-      deserunt mollit anim id est laborum.
-    </p>
-  </div>
-</section>
-<section class="container">
-  <div class="shopping">
-    <div class="shopping__item" *ngFor="let item of shoppingItem">
-      <img [src]="item.image" class="img-circle" alt="" />
-      <h3>{{ item.title }}</h3>
-      <button class="butn">Go Shop</button>
+    <div class="category__title">
+      <h2>Categories of The Month</h2>
+      <p>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div class="category__shoping">
+      <div class="category__shoping__item" *ngFor="let item of shoppingItem">
+        <img [src]="item.image" class="img-circle" alt="" />
+        <h3>{{ item.title }}</h3>
+        <button class="btn">Go Shop</button>
+      </div>
     </div>
   </div>
 </section>
-<section class="product">
+
+<section class="section product">
   <div class="container">
     <div class="product__top">
       <h2>Featured Product</h2>
@@ -79,21 +80,22 @@
       </p>
     </div>
     <div class="product__down">
-      <div class="product__down__item" *ngFor="let item of products">
+      <div class="product__down__item" *ngFor="let item of posts">
         <a>
-          <img [src]="item.image" />
+          <img [src]="item.url" />
         </a>
         <div class="product_item__details">
           <div class="product_item__title">
-            <ngb-rating [rate]="item.rate" class="ng_rating" [max]="5"> </ngb-rating>
-            <h4>{{ item.price }}</h4>
+            <ngb-rating [rate]="+item.id" class="ng_rating" [max]="5">
+            </ngb-rating>
+            <h4>{{ item.id }}</h4>
           </div>
-          <h4>{{ item.title }} </h4>
+          <h4>{{ item.title }}</h4>
           <p>
-            {{ item.description }}
+            {{ item.thumbnailUrl }}
           </p>
           <div class="product_item__title">
-            <span> {{ item.reviews }}</span>
+            <span> Reviews ({{ item.id }})</span>
           </div>
         </div>
       </div>

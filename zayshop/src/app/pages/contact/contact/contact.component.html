@@ -1,100 +1,123 @@
 <section class="contact">
- 
-<div class="contact__top">
-
-
-    <h1>Contact Us
-    </h1>
-    <p>Proident, sunt in culpa qui officia deserunt <br>mollit anim id est laborum. Lorem ipsum dolor sit amet.
-
+  <div class="contact__top">
+    <h1>Contact Us</h1>
+    <p>
+      Proident, sunt in culpa qui officia deserunt <br />mollit anim id est
+      laborum. Lorem ipsum dolor sit amet.
     </p>
-</div>
-<div class="contact__down"></div>
-<div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=cairo%20+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/draw-radius-circle-map/"></a></div>
-   
+  </div>
+  <div class="contact__down"></div>
+  <div style="width: 100%">
+    <iframe
+      width="100%"
+      height="300"
+      frameborder="0"
+      scrolling="no"
+      marginheight="0"
+      marginwidth="0"
+      src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=cairo%20+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+    ></iframe
+    ><a href="https://www.maps.ie/draw-radius-circle-map/"></a>
+  </div>
 </section>
 <section class="form">
-    
-<div class="container">  <form  class="section__form" [formGroup]="contactForm" (ngSubmit)="submit()" novalidate>
-    <div class="form__user_data">
+  <div class="container">
+    <form
+      class="section__form"
+      [formGroup]="contactForm"
+      (ngSubmit)="submit()"
+      novalidate
+    >
+      <div class="form__user_data">
         <div class="form-group">
-            <label>Name</label>
+          <label>Name</label>
           <input
             type="text"
             class="form-control"
-            formControlName="fullName"
-            placeholder="FullNamee"
+            formControlName="name"
+            placeholder="namee"
           />
           <div
             class="invalid-feedback"
             *ngIf="
-              contactForm.get('fullName').touched &&
-              contactForm.get('fullName').invalid
+              contactForm.get('name').touched && contactForm.get('name').invalid
             "
           >
-            <p *ngIf="contactForm.get('fullName').errors?.required">
-              Fullname is required
+            <p *ngIf="contactForm.get('name').errors?.required">
+              name is required
             </p>
           </div>
         </div>
         <div class="form-group">
-            <label>Email</label>
+          <label>Email</label>
 
           <input
             type="email"
             class="form-control"
             formControlName="email"
-            placeholder="Email"
+            placeholder="email"
           />
           <div
             *ngIf="
-              contactForm.get('email').touched && contactForm.get('email').invalid
+              contactForm.get('email').touched &&
+              contactForm.get('email').invalid
             "
             class="invalid-feedback"
           >
             <p *ngIf="contactForm.get('email').errors?.required">
-              Email is required
+              email is required
             </p>
             <p *ngIf="contactForm.get('email').errors?.pattern">
-              Email must be valid
+              email must be valid
             </p>
           </div>
         </div>
-    </div> 
-   
-        <div class="form-group">
-            <label>Subject</label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="subject"
-            placeholder="Subject"
-          />
-          <div
-            class="invalid-feedback"
-            *ngIf="
-              contactForm.get('subject').touched &&
-              contactForm.get('subject').invalid
-            "
-          >
-            <p *ngIf="contactForm.get('subject').errors?.required">
-              Subject is required
-            </p>
-          </div>
+      </div>
+
+      <div class="form-group">
+        <label>address</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="address"
+          placeholder="address"
+        />
+        <div
+          class="invalid-feedback"
+          *ngIf="
+            contactForm.get('address').touched &&
+            contactForm.get('address').invalid
+          "
+        >
+          <p *ngIf="contactForm.get('address').errors?.required">
+            address is required
+          </p>
         </div>
-  
-        <div class="form-Group">
-            <label>Message</label>
-          <textarea
-            class="form-control"
-            formControlName="message"
-            placeholder="Your Message"
-            rows="3"
-          ></textarea>
+      </div>
+
+      <div class="form-Group">
+        <label>website</label>
+        <textarea
+          class="form-control"
+          formControlName="website"
+          placeholder="Your website"
+          rows="3"
+        ></textarea>
+        <div
+          class="invalid-feedback"
+          *ngIf="
+            contactForm.get('website').touched &&
+            contactForm.get('website').invalid
+          "
+        >
+          <p *ngIf="contactForm.get('website').errors?.required">
+            website is required
+          </p>
         </div>
-        <div class="auth__button">
-          <button class="butn " [disabled]="contactForm.valid">Let's Talk</button>
-        </div>
-      </form></div>
-  
+      </div>
+      <div class="auth__button">
+        <button class="btn" [disabled]="!contactForm.valid">Let's Talk</button>
+      </div>
+    </form>
+  </div>
 </section>

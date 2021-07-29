@@ -6,18 +6,25 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutModule } from './layout/layout.module';
 import { FormsModule } from '@angular/forms';
-import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { LoadingBarModule } from '@ngx-loading-bar/core';
+import { ToastsContainerComponent } from './shared/components/toasts-container/toasts-container.component';
+import { NgbToastModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, ToastsContainerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,LayoutModule,FormsModule
+    NgbModule,
+    LayoutModule,
+    FormsModule,
+    LoadingBarModule,
+    NgbToastModule,
+    HttpClientModule,
   ],
   providers: [NgbActiveModal],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

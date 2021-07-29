@@ -1,17 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
-@import 'assets/scss/variables';
-@import 'assets/scss/global';
+@import "~bootstrap/scss/bootstrap";
 
-@import 'assets/scss/header';
-@import 'assets/scss/footer';
-@import 'assets/scss/rating';
+@import "assets/scss/variables";
+@import "assets/scss/global";
+@import "assets/scss/header";
+@import "assets/scss/navbar";
+@import "assets/scss/footer";
+@import "assets/scss/rating";
 
-@import 'assets/scss/home';
-@import 'assets/scss/about';
-@import 'assets/scss/contact';
-@import 'assets/scss/shop';
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "assets/scss/home";
+@import "assets/scss/about";
+@import "assets/scss/contact";
+@import "assets/scss/shop";

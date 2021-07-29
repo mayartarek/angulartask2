@@ -1,5 +1,4 @@
 .banner {
-  margin-bottom: 140px;
   background-color: #efefef;
   .carousel-indicators .li {
     background-color: $GreenColor;
@@ -25,22 +24,18 @@
 }
 
 .category {
-  width: 100%;
-  margin: auto;
-
   text-align: center;
   p {
     margin-top: 20px;
   }
 }
-.shopping {
+.category__shoping {
   display: grid;
   grid-gap: 121px;
   grid-row: 30px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  margin-top: 150px;
-  margin-bottom: 150px;
-  .shopping__item {
+  margin-top: 100px;
+  .category__shoping__item {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -73,18 +68,17 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     .product__down__item {
       .product_item__details {
-          padding: 12px;
-          background-color: white;
-          .star {
-            font-size: 1.5rem;
-            color: #ede861 ;
-          }
+        padding: 12px;
+        background-color: white;
+        .star {
+          font-size: 1.5rem;
+          color: #ede861;
+        }
         h4 {
           margin-left: auto;
         }
         .product_item__title {
           display: flex;
-        
         }
       }
       img {
