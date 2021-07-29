@@ -80,25 +80,28 @@
       </p>
     </div>
     <div class="product__down">
-      <div class="product__down__item" *ngFor="let item of posts">
-        <a>
-          <img [src]="item.url" />
-        </a>
-        <div class="product_item__details">
-          <div class="product_item__title">
-            <ngb-rating [rate]="+item.id" class="ng_rating" [max]="5">
-            </ngb-rating>
-            <h4>{{ item.id }}</h4>
-          </div>
-          <h4>{{ item.title }}</h4>
-          <p>
-            {{ item.thumbnailUrl }}
-          </p>
-          <div class="product_item__title">
-            <span> Reviews ({{ item.id }})</span>
+      <ng-container *ngFor="let item of posts">
+        <div class="product__down__item" (click)="details(item)">
+          <a>
+            <img [src]="item.url" />
+          </a>
+          <div class="product_item__details">
+            <div class="product_item__title">
+              <ngb-rating [rate]="+item.id" class="ng_rating" [max]="5">
+              </ngb-rating>
+              <h4>{{ item.id }}</h4>
+            </div>
+            <h4>{{ item.title }}</h4>
+            <p>
+              {{ item.thumbnailUrl }}
+            </p>
+            <div class="product_item__title">
+              <span> Reviews ({{ item.id }})</span>
+              <a class="ml-5" (click)="delete(item.id)">delete</a>
+            </div>
           </div>
         </div>
-      </div>
+      </ng-container>
     </div>
   </div>
 </section>

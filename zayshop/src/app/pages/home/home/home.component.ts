@@ -1,7 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NgbModule, NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
+import {
+  NgbModal,
+  NgbModule,
+  NgbRatingConfig,
+} from '@ng-bootstrap/ng-bootstrap';
 import { tap } from 'rxjs/operators';
+import { postApi } from 'src/app/shared/constants/api.constants';
+import { DELETED_SUCCESSFULLY } from 'src/app/shared/constants/general.constants';
+import { DataService } from 'src/app/shared/services/data.service';
+import { LoadingService } from 'src/app/shared/services/loading.service';
+import { ToastService } from 'src/app/shared/services/toast-service';
+import { DetailsComponent } from '../details/details.component';
 import { IPost } from '../models/IPost.model';
 
 @Component({
@@ -57,7 +67,13 @@ export class HomeComponent implements OnInit {
 
   posts: IPost[] = [];
   // rate: number;
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private dataService: DataService,
+    public loadingService: LoadingService,
+    private toast: ToastService,
+    private modalService: NgbModal
+  ) {}
 
   ngOnInit(): void {
     this.route.data
@@ -69,5 +85,23 @@ export class HomeComponent implements OnInit {
         })
       )
       .toPromise();
+  }
+  delete(id: string) {
+    this.dataService
+      .delete(`${postApi}/${id}`)
+      .pipe(
+        tap(() => {
+          this.toast.show(DELETED_SUCCESSFULLY, {
+            classname: 'bg-success text-light',
+          });
+        })
+      )
+      .toPromise();
+  }
+  details(item: IPost) {
+    const modalRef = this.modalService.open(DetailsComponent, {
+      windowClass: 'large-modal',
+    });
+    modalRef.componentInstance.item = item;
   }
 }
