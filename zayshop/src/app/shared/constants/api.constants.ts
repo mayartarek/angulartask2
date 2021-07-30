@@ -6,4 +6,3 @@
 export const apiUrl = 'https://jsonplaceholder.typicode.com';
 export const postsApi = `${apiUrl}/photos`;
 export const contactApi = `${apiUrl}/users`;
-export const postApi = `${apiUrl}/posts`;
