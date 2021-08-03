@@ -99,7 +99,7 @@
 .icon{
   width: 44px;
   fill: gray;
-  &:hover{
+  &:hover,&:active,&:focus,&:active{
    fill: rgb(192, 22, 22);
    cursor: pointer;
 
