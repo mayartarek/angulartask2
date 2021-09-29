@@ -74,8 +74,34 @@
     text-align: center;
     background-color: #e9eef5;
     padding: 40px 30px;
+
+  
       
     img{    filter: grayscale(100%);
       opacity: 0.5;
     width: 12px;}
+}
+.brands__bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .carousel-control-next {
+    
+    right: -45px;
+}
+.carousel-control-prev{
+  left: -45px;
+}
+.carousel-indicators{
+  display: none;
+}
+}
+.icon{
+  width: 44px;
+  fill: gray;
+  &:hover,&:active,&:focus,&:active{
+   fill: rgb(192, 22, 22);
+   cursor: pointer;
+
+  }
 }
